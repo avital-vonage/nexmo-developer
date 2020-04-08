@@ -5,29 +5,33 @@ menu_weight: 1
 ---
 
 
-Inside `ConversationViewController.swift`, locate the following line 
-
-`//MARK: Fetch Conversation` 
+Inside `ChatViewModel` class, locate the following line 
 
 and fill in the `getConversation` method implementation:
 
-```swift
-//MARK: Fetch Conversation
+```kotlin
+private fun getConversation() {
+    client.getConversation(Config.CONVERSATION_ID, object : NexmoRequestListener<NexmoConversation> {
 
-func getConversation() {
-    NXMClient.shared.getConversationWithUuid(User.conversationId) { [weak self] (error, conversation) in
-        self?.error = error
-        self?.conversation = conversation
-        self?.updateInterface()
-        if conversation != nil {
-            self?.getEvents()
+        override fun onSuccess(conversation: NexmoConversation?) {
+            this@ChatViewModel.conversation = conversation
+
+            conversation?.let {
+                getConversationEvents(it)
+                conversation.addMessageEventListener(messageListener)
+            }
         }
-    }
+
+        override fun onError(apiError: NexmoApiError) {
+            this@ChatViewModel.conversation = null
+            _errorMessage.postValue("Error: Unable to load conversation ${apiError.message}")
+        }
+    })
 }
 ```
 
-Notice the use of the `NXMClient.shared` singleton - this references the exact same object we had as a `client` property in `UserSelectionViewController`.
+Notice the use of the `client` - this references the exact same object as the  `client` reffered in the `LoginViewModel` (instance is also retrieved by `NexmoClient.get()`).
 
-> **Note:** This is where we get to use the `conversationId` static property we've defined in the "The Starter Project" step.
+> **Note:** Conversation id is retrieved from `Config.CONVERSATION_ID` provided in the previous step.
 
 If a conversation has been retrieved, we're ready to process to the next step: getting the events for our conversation.

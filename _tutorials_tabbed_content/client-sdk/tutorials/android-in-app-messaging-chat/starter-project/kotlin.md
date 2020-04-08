@@ -4,12 +4,7 @@ language: kotlin
 menu_weight: 1
 ---
 
-
-Clone this [Github project](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging).
-
-In Android Studio go to menu `File -> Open` and select the `kotlin-start` folder from cloned repository (this not a top-level folder).
-
-Open `app/src/main/java/com/vonage/tutorial/messaging/Consts.swift` file and add fill:
+Open `Config.kt` file and add fill:
 
 1. `Jane`'s user Id and JWTs
 1. `Joe`'s user Id and JWTs
