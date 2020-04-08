@@ -6,5 +6,5 @@ description: In this step you display any messages already sent as part of this 
 # Show the message history
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/tutorials/ios-in-app-messaging-chat/fetch-events'
+source: '_tutorials_tabbed_content/client-sdk/tutorials/android-in-app-messaging-chat/fetch-events'
 ```

@@ -1,6 +1,6 @@
 ---
-title: Swift
-language: swift
+title: Kotlin
+language: kotlin
 menu_weight: 1
 ---
 

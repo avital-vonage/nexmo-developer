@@ -18,5 +18,5 @@ The interface consists of three groups of elements:
 All are referenced as `IBOutlet`s:
 
 ```tabbed_content
-source: '_tutorials_tabbed_content/client-sdk/tutorials/ios-in-app-messaging-chat/conversation-ui'
+source: '_tutorials_tabbed_content/client-sdk/tutorials/android-in-app-messaging-chat/conversation-ui'
 ```
