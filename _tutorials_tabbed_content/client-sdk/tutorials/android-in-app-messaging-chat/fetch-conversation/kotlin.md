@@ -5,9 +5,7 @@ menu_weight: 1
 ---
 
 
-Inside `ChatViewModel` class, locate the following line 
-
-and fill in the `getConversation` method implementation:
+Inside `ChatViewModel` class, locate the following line and fill in the `getConversation()` method implementation:
 
 ```kotlin
 private fun getConversation() {
@@ -18,7 +16,6 @@ private fun getConversation() {
 
             conversation?.let {
                 getConversationEvents(it)
-                conversation.addMessageEventListener(messageListener)
             }
         }
 

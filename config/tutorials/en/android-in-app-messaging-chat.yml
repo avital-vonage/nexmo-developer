@@ -29,6 +29,7 @@ tasks:
   - client-sdk/android-in-app-messaging-chat/add-users-to-conversation
   - client-sdk/android-in-app-messaging-chat/generate-jwts
   - client-sdk/android-in-app-messaging-chat/starter-project
+  - client-sdk/android-in-app-messaging-chat/init-client
   - client-sdk/android-in-app-messaging-chat/authenticate-users
   - client-sdk/android-in-app-messaging-chat/fetch-conversation
   - client-sdk/android-in-app-messaging-chat/fetch-events

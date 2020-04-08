@@ -3,13 +3,13 @@ title: Kotlin
 language: kotlin
 menu_weight: 1
 ---
-`NexmoClient` is the main class used to interact with Android-Client-SDK.  You have to retrieve client instance inside `LoginViewModel` class. Usually it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update it's implementation:
+Now You have to retrieve client instance inside `LoginViewModel` class. Usually it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update it's implementation:
 
 ```kotlin
-private var client: NexmoClient = NexmoClient.get()
+private var client = NexmoClient.get()
 ```
 
-Locate the `onLoginUser` method within the `LoginViewModel` class and fill it's body to login the user:
+Locate the `onLoginUser` method within the `LoginViewModel` class and fill it's body to enable user login:
 
 ```kotlin
 fun onLoginUser(user: User) {
