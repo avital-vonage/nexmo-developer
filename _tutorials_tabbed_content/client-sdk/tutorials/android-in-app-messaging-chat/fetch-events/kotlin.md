@@ -5,68 +5,76 @@ menu_weight: 1
 ---
 
 
-Right below  `getConversation()`, let's add a method to retrieve the events:
+Right below  `getConversation()` method, let's add a method to retrieve the events:
 
-```swift
-func getEvents() {
-    guard let conversation = self.conversation else {
-        return
+```kotlin
+    private fun getConversationEvents(conversation: NexmoConversation) {
+        conversation.getEvents(100, NexmoPageOrder.NexmoMPageOrderAsc, null,
+            object : NexmoRequestListener<NexmoEventsPage> {
+                override fun onSuccess(nexmoEventsPage: NexmoEventsPage?) {
+                    nexmoEventsPage?.pageResponse?.data?.let {
+                        _conversationMessages.postValue(it.toList())
+                    }
+                }
+
+                override fun onError(apiError: NexmoApiError) {
+                    _errorMessage.postValue("Error: Unable to load conversation events ${apiError.message}")
+                }
+            })
     }
-    conversation.getEvents { [weak self] (error, events) in
-        self?.error = error
-        self?.events = events
-        self?.updateInterface()
-    }
-}
 ```
 
-Once the events are retrieved (or an error is returned), we're updating the interface to reflect the new data.
+Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.
 
-Inside `updateInterface()` locate the `// events found - show them based on their type` line - this is where we're going to list our conversation history:
+> **NOTE:** We are using two LiveData streams. `_conversationMessages` to post succesfull API response and `_errorMessage` to post returned error.
 
-```swift
-// events found - show them based on their type
+Let's make our view react to the new data. Inside `ChatFragment` locate the `private var conversationMessages = Observer<List<NexmoEvent>?>` property and add this code to handle our conversation history:
 
-events.forEach { (event) in
-    if let memberEvent = event as? NXMMemberEvent {
-        self.showMemberEvent(event: memberEvent)
+```kotlin
+private var conversationMessages = Observer<List<NexmoEvent>?> { events ->
+    val messages = events?.mapNotNull {
+        when (it) {
+            is NexmoMemberEvent -> getConversationLine(it)
+            is NexmoTextEvent -> getConversationLine(it)
+            else -> null
+        }
     }
-    if let textEvent = event as? NXMTextEvent {
-        self.showTextEvent(event: textEvent)
-    }
-}
-```
 
-We're only show text and member related events (member invited, joined or left) for now.
-
-Locate the line `//MARK: Show events` and let's add the `showMemberEvent(event: NXMMemberEvent)` and `showTextEvent(event: NXMTextEvent)` methods:
-
-```swift
-//MARK: Show events
-
-func showMemberEvent(event: NXMMemberEvent) {
-    switch event.state {
-    case .invited:
-        addConversationLine("\(event.member.user.name) was invited.")
-    case .joined:
-        addConversationLine("\(event.member.user.name) joined.")
-    case .left:
-        addConversationLine("\(event.member.user.name) left.")
-    @unknown default:
-        fatalError("Unknown member event state.")
-    }
-}
-func showTextEvent(event: NXMTextEvent) {
-    if let message = event.text {
-        addConversationLine("\(event.fromMember?.user.name ?? "A user") said: '\(message)'")
-    }
-}
-
-func addConversationLine(_ line: String) {
-    if let text = conversationTextView.text, text.lengthOfBytes(using: .utf8) > 0 {
-        conversationTextView.text = "\(text)\n\(line)"
+    conversationMessagesTextView.text = if (messages.isNullOrEmpty()) {
+        "Conversation has No messages"
     } else {
-        conversationTextView.text = line
+        messages.joinToString(separator = "\n")
+    }
+
+    progressBar.isVisible = false
+    chatContainer.isVisible = true
+}
+```
+
+To handle member related events (member invited, joined or left) we need to fill the body of the `fun getConversationLine(memberEvent: NexmoMemberEvent)` method:
+
+```kotlin
+private fun getConversationLine(memberEvent: NexmoMemberEvent): String {
+    val user = memberEvent.member.user.name
+
+    return when (memberEvent.state) {
+        NexmoMemberState.JOINED -> "$user joined"
+        NexmoMemberState.INVITED -> "$user invited"
+        NexmoMemberState.LEFT -> "$user left"
+        else -> "Error: Unknown member event state"
     }
 }
 ```
+
+Above method converts `NexmoMemberEvent` to a `String` that will be displayed as a single line in the chat conversation. Similar conversion need to be done for `NexmoTextEvent`. Let's fill the body of the `getConversationLine(textEvent: NexmoTextEvent)` method.
+
+```kotlin
+private fun getConversationLine(textEvent: NexmoTextEvent): String {
+    val user = textEvent.fromMember.user.name
+    return "$user said: ${textEvent.text}"
+}
+```
+
+> **NOTE:** In this tutorial we are only handling member related events (`NexmoMemberEvent`) and message event (`NexmoTextEvent`). Other kinds of the events are be ignored in the above `when` expression (`else -> null`).
+
+Now we are ready to send the first message.
