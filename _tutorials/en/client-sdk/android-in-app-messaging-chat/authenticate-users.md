@@ -9,7 +9,7 @@ Your users must be authenticated to be able to participate in the `Conversation`
 
 ![LoginFragment UI](/assets/images/client-sdk/android-in-app-messaging-chat/login-fragment-ui.png)
 
-> **NOTE:** You perform this authentication using the `JWTs` generated and provided in a previous steps. 
+> **NOTE:** You perform this authentication using the `JWTs` generated and provided in previous steps. 
 
 ```tabbed_content
 source: '_tutorials_tabbed_content/client-sdk/tutorials/android-in-app-messaging-chat/authenticate-users'

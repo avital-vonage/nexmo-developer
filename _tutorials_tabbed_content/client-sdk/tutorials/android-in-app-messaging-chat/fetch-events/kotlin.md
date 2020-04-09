@@ -26,7 +26,7 @@ Right below  `getConversation()` method, let's add a method to retrieve the even
 
 Once the events are retrieved (or an error is returned), we're updating the view (`ChatFragment`) to reflect the new data.
 
-> **NOTE:** We are using two LiveData streams. `_conversationMessages` to post succesfull API response and `_errorMessage` to post returned error.
+> **NOTE:** We are using two LiveData streams. `_conversationMessages` to post successful API response and `_errorMessage` to post returned error.
 
 Let's make our view react to the new data. Inside `ChatFragment` locate the `private var conversationMessages = Observer<List<NexmoEvent>?>` property and add this code to handle our conversation history:
 
@@ -75,6 +75,6 @@ private fun getConversationLine(textEvent: NexmoTextEvent): String {
 }
 ```
 
-> **NOTE:** In this tutorial we are only handling member related events (`NexmoMemberEvent`) and message event (`NexmoTextEvent`). Other kinds of the events are be ignored in the above `when` expression (`else -> null`).
+> **NOTE:** In this tutorial, we are only handling member-related events `NexmoMemberEvent` and `NexmoTextEvent`. Other kinds of events are being ignored in the above `when` expression (`else -> null`).
 
 Now we are ready to send the first message.

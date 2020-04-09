@@ -1,6 +1,6 @@
 ---
 title: Kotlin
-    language: kotlin
+language: kotlin
 menu_weight: 1
 ---
 
@@ -52,7 +52,7 @@ Now, locate the `private val messageListener = object : NexmoMessageEventListene
 
 Now each time new message is revieved `onTextEvent(textEvent: NexmoTextEvent)` listener will be called, new message will be passed to `updateConversation(textEvent: NexmoTextEvent)` method and dispatched to the view via  `conversationMessages` `LiveData` (same `LiveData` used to dispatch all the messages after loading conversation events).
 
-The last thing to do is to make sure that all listeners will be removed when `ChatViewModel` is destroyed eg. when user navigates back. Fill the body of the `onCleared()` method in the `ChatViewModel` class.
+The last thing to do is to make sure that all listeners will be removed when `ChatViewModel` is destroyed eg. when the user navigates back. Fill the body of the `onCleared()` method in the `ChatViewModel` class.
 
 ```kotlin
 override fun onCleared() {

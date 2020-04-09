@@ -17,4 +17,4 @@ The output is similar to:
 Conversation created: CON-aaaaaaaa-bbbb-cccc-dddd-0123456789ab
 ```
 
-Make a note of this newly generated conversation Id (`CON-...`). You will use it leater to add [Users](/conversation/concepts/user) to the [Conversation](/conversation/concepts/conversation) as [Members](/conversation/concepts/member).
+Make a note of this newly generated conversation Id (`CON-...`). You will use it later to add [Users](/conversation/concepts/user) to the [Conversation](/conversation/concepts/conversation) as [Members](/conversation/concepts/member).

@@ -27,7 +27,7 @@ private fun getConversation() {
 }
 ```
 
-Notice the use of the `client` - this references the exact same object as the  `client` reffered in the `LoginViewModel` (instance is also retrieved by `NexmoClient.get()`).
+Notice the use of the `client` - this references the exact same object as the  `client` referred in the `LoginViewModel` (instance is also retrieved by `NexmoClient.get()`).
 
 > **Note:** Conversation id is retrieved from `Config.CONVERSATION_ID` provided in the previous step.
 

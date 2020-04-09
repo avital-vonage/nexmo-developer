@@ -16,7 +16,7 @@ class BaseApplication : Application() {
 }
 ```
 
-The above code will allow to retrieve `NexmoClient` instance later by using `NexmoClient.get()`.
+The above code will allow retrieving `NexmoClient` instance later by using `NexmoClient.get()`.
 
 > **NOTE:** You can enable additional `Logcat` logging by utilising `logLevel()` method of the builder eg.
 `NexmoClient.Builder().logLevel(ILogger.eLogLevel.SENSITIVE).build(this)`

@@ -12,7 +12,7 @@ introduction:
 
     First, you will create a Conversation and two Users. Then, you will authenticate these Users and add them to the Conversation as Members.
 
-    Finally, you will implement chat functionality in your application, including the ability to view and send messages and be notified when new message appearas in Conversation.
+    Finally, you will implement chat functionality in your application, including the ability to view and send messages and be notified when a new message appears in Conversation.
 
     The source code is available [on GitHub](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging).
 

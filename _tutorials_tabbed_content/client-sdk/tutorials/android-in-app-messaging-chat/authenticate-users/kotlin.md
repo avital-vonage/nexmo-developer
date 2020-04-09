@@ -3,7 +3,7 @@ title: Kotlin
 language: kotlin
 menu_weight: 1
 ---
-Now You have to retrieve client instance inside `LoginViewModel` class. Usually it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update it's implementation:
+Now You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update it's implementation:
 
 ```kotlin
 private var client = NexmoClient.get()
@@ -19,12 +19,12 @@ fun onLoginUser(user: User) {
 }
 ```
 
-> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method that was written for you. This method is called when one of the two `Login as ...` buttons are clicked. This method calls above `onLoginUser` method. 
+> **NOTE:** Inside `LoginFragment` class, explore the `loginUser` method that was written for you. This method is called when one of the two `Login as ...` buttons are clicked. This method calls the above `onLoginUser` method. 
 
 > **NOTE:** The `User` type is the `data class` that we've defined in the `Config.kt` file.
 
 
-Now add connection listener to listen to the `client` instance to listen for connection state changes and use `_connectionStatus` `LiveData` to propagate new connection state to the view (`LoginFragment`). Locate the `init` block inside `LoginViewModel` class and repleace it with this code:
+Now add a connection listener to listen to the `client` instance to listen for connection state changes and use `_connectionStatus` `LiveData` to propagate a new connection state to the view (`LoginFragment`). Locate the `init` block inside `LoginViewModel` class and replace it with this code:
 
 
 ```kotlin
@@ -50,4 +50,4 @@ private val stateObserver = Observer<ConnectionStatus> {
 }
 ```
 
-The above code will display current connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate user to the `ChatFragment` where user can view and interact with the conversation.
+The above code will display the current connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment` where the user can view and interact with the conversation.
