@@ -5,21 +5,20 @@ description: Add your two new users as Conversation members
 
 # Add Users to the Conversation
 
-You must now add your two new `Users` as [Members](/conversation/concepts/member) of the `Conversation`.
-
-Use the Nexmo CLI for this, replacing `CONVERSATION_ID` in the examples below with your own value given previously (`CON-...`):
+You must now add your [Users](/conversation/concepts/user) as [Members](/conversation/concepts/member) of the [Conversation](/conversation/concepts/conversation) using Nexmo CLI. 
+To add `Jane` to the converrsation replace `CONVERSATION_ID` in the command below with your own conversation Id generated previously (`CON-...`) and run the command:
 
 ```sh
 $ nexmo member:add CONVERSATION_ID action=join channel='{"type":"app"}' user_name=Jane
 ```
 
-The output is similar to:
+The output is ID of the Member:
 
 ```
 Member added: MEM-aaaaaaa-bbbb-cccc-dddd-0123456789ab
 ```
 
-Similarly, to add the second user:
+Now you need to add the second user, `Joe` to the Conversation. Similarly replace the `CONVERSATION_ID` and execute the command:
 
 ```sh
 $ nexmo member:add CONVERSATION_ID action=join channel='{"type":"app"}' user_name=Joe

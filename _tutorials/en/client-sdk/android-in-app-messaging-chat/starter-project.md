@@ -12,7 +12,7 @@ image: public/assets/images/tutorials/client-sdk/android-in-app-messaging-chat/a
 ```
 
 1. Clone this [Github project](https://github.com/nexmo-community/client-sdk-android-tutorial-messaging).
-1. Open project in the `Android Studio` - navigate to menu `File -> Open` and select the `kotlin-start` folder from cloned repository (this not a top-level folder).
+2. Open project in the `Android Studio` - navigate to menu `File -> Open` and select the `kotlin-start` folder from cloned repository.
 
 All filles that will be modified during this tutorial are located in the `app/src/main/java/com/vonage/tutorial/messaging/chat` directory:
 
