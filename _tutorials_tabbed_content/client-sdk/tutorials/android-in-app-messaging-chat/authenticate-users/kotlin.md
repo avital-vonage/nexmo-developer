@@ -6,7 +6,7 @@ menu_weight: 1
 Now You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update it's implementation:
 
 ```kotlin
-private var client = NexmoClient.get()
+private val client = NexmoClient.get()
 ```
 
 Locate the `onLoginUser` method within the `LoginViewModel` class and fill it's body to enable user login:
