@@ -23,18 +23,18 @@ prerequisites:
   - install-android-studio
 
 tasks:
-  - client-sdk/in-app-messaging-chat/create-application
-  - client-sdk/in-app-messaging-chat/create-conversation
-  - client-sdk/in-app-messaging-chat/create-users
-  - client-sdk/in-app-messaging-chat/add-users-to-conversation
-  - client-sdk/in-app-messaging-chat/generate-jwts
-  - client-sdk/in-app-messaging-chat/starter-project
-  - client-sdk/in-app-messaging-chat/initialize-client
-  - client-sdk/in-app-messaging-chat/authenticate-users
-  - client-sdk/in-app-messaging-chat/fetch-conversation
-  - client-sdk/in-app-messaging-chat/fetch-events
-  - client-sdk/in-app-messaging-chat/send-message
-  - client-sdk/in-app-messaging-chat/receive-new-messages
+  - client-sdk/in-app-messaging/create-application
+  - client-sdk/in-app-messaging/create-conversation
+  - client-sdk/in-app-messaging/create-users
+  - client-sdk/in-app-messaging/add-users-to-conversation
+  - client-sdk/in-app-messaging/generate-jwts
+  - client-sdk/in-app-messaging/starter-project
+  - client-sdk/in-app-messaging/initialize-client
+  - client-sdk/in-app-messaging/authenticate-users
+  - client-sdk/in-app-messaging/fetch-conversation
+  - client-sdk/in-app-messaging/fetch-events
+  - client-sdk/in-app-messaging/send-message
+  - client-sdk/in-app-messaging/receive-new-messages
 
 conclusion:
   title: What's next?

@@ -1,8 +1,16 @@
 ---
-title: Kotlin
-language: kotlin
-menu_weight: 1
+title: Authenticate Your Users
+description: In this step you authenticate your users via the JWTs you created earlier
 ---
+
+# Authenticate Your Users
+
+Your users must be authenticated to be able to participate in the `Conversation`. Login screen (`LoginFragment` and `LoginViewModel` classes) is responsible for authenticating the users.
+
+![LoginFragment UI](/assets/images/client-sdk/android-in-app-messaging-chat/login-fragment-ui.png)
+
+> **NOTE:** You perform this authentication using the `JWTs` generated and provided in previous steps. 
+
 Now You have to retrieve client instance inside `LoginViewModel` class. Usually, it would be provided it via injection, but for tutorial purposes you will retrieve instance directly using static method. Locate the `private val client` property in the `LoginViewModel` class and update it's implementation:
 
 ```kotlin
@@ -51,3 +59,5 @@ private val stateObserver = Observer<ConnectionStatus> {
 ```
 
 The above code will display the current connection state and if the user is authenticated (`ConnectionStatus.CONNECTED`) it will navigate the user to the `ChatFragment` where the user can view and interact with the conversation.
+
+We're now ready to fetch the conversation within the app.

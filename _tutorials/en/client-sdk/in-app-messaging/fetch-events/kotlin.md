@@ -1,9 +1,9 @@
 ---
-title: Kotlin
-language: kotlin
-menu_weight: 1
+title: Show the message history
+description: In this step you display any messages already sent as part of this Conversation
 ---
 
+# Show the message history
 
 Right below  `getConversation()` method, let's add a method to retrieve the events:
 

@@ -1,9 +1,9 @@
 ---
-title: Kotlin
-language: kotlin
-menu_weight: 1
+title: Receive new messages
+description: In this step you display any new messages
 ---
 
+# Receive new messages
 
 All events we got so far are already in this conversation. So how do we display any new incoming messages? We can achieve this by implementing the conversation listener.
 
@@ -58,5 +58,4 @@ The last thing to do is to make sure that all listeners will be removed when `Ch
 override fun onCleared() {
     conversation?.removeMessageEventListener(messageListener)
 }
-
 ```

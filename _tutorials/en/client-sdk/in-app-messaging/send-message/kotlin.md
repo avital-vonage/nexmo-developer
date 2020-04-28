@@ -1,9 +1,11 @@
 ---
-title: Kotlin
-language: kotlin
-menu_weight: 1
+title: Send a message
+description: In this step you will send a message to the conversation
 ---
 
+# Send a message
+
+Time to send the first message.
 
 Inside `ChatViewModel` class, locate the `onSendMessage` method and fill its the body:
 
