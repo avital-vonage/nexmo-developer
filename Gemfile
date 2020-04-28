@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.7'
+ruby '2.5.8'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -77,7 +77,7 @@ gem 'neatjson'
 gem 'faker', '2.11.0', require: false
 
 # factory_girl_rails provides integration between factory_girl and rails 3 or newer (currently just automatic factory definition loading)
-gem 'factory_bot_rails', '5.1.1', require: false
+gem 'factory_bot_rails', '5.2.0', require: false
 
 # A slim ruby wrapper for posting to slack webhooks
 gem 'slack-notifier', '2.3.2'
@@ -110,7 +110,7 @@ gem 'bootsnap', require: false
 gem 'diffy', require: false
 
 # Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide.
-gem 'rubocop', '~> 0.81.0', require: false
+gem 'rubocop', '~> 0.82.0', require: false
 gem 'rubocop-rails', '~> 2.5', require: false
 
 # Volta needs a CSS autoprefixer
@@ -129,9 +129,9 @@ gem 'lograge'
 gem 'countries'
 gem 'country_select', '~> 4.0'
 
-gem 'nexmo_markdown_renderer', github: 'nexmo/nexmo-markdown-renderer', branch: 'i18n-fixes'
+gem 'nexmo_markdown_renderer', github: 'nexmo/nexmo-markdown-renderer', branch: 'fix-kotlin-icon'
 
-gem 'nexmo-oas-renderer', '~> 0.9', require: false
+gem 'nexmo-oas-renderer', '~> 0.10', require: false
 
 gem 'smartling'
 

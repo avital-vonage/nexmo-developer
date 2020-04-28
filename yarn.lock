@@ -1570,10 +1570,10 @@
   dependencies:
     "@types/yargs-parser" "*"
 
-"@vonagevolta/volta2@^0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@vonagevolta/volta2/-/volta2-0.0.30.tgz#61300bef5eebc2f97aaf60eb7370f02cbefee173"
-  integrity sha512-nKi+wRL0OAFJ6VAObrBIvDYm1Nuo4Nn/sbdnKP6Widym2tkHZBW6Ppptspyu65VT43i4O0zr8sAeXeTZU0l9Qg==
+"@vonagevolta/volta2@^0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@vonagevolta/volta2/-/volta2-0.0.39.tgz#3d20f18ca1583f298e7731636bd7281938fc7217"
+  integrity sha512-MKj5mZp9Ku0Ek6xGN10bXc9lerhYo0T8dAeKB322wnNMEAnX9h3oI+HzFRgatA0KHPIYKpazFsQ1NSPJ29CzeQ==
   dependencies:
     marked "^0.7.0"
     marked-sanitizer-github "^1.0.0"
@@ -5965,9 +5965,9 @@ https-browserify@^1.0.0:
   integrity sha1-7AbBDgo0wPL68Zn3/X/Hj//QPHM=
 
 https-proxy-agent@^2.2.1:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.2.tgz#271ea8e90f836ac9f119daccd39c19ff7dfb0793"
-  integrity sha512-c8Ndjc9Bkpfx/vCJueCPy0jlP4ccCCSNDp8xwCZzPjKJUm+B+u9WX2x98Qx4n1PiMNTWo3D7KK5ifNV/yJyRzg==
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.4.tgz#4ee7a737abd92678a293d9b34a1af4d0d08c787b"
+  integrity sha512-OmvfoQ53WLjtA9HeYP9RNrWMJzzAz1JGaSFr1nijg0PVR1JaD/xbJq1mdEIIlxGpXp9eSe/O2LgU9DJmTPd0Eg==
   dependencies:
     agent-base "^4.3.0"
     debug "^3.1.0"
