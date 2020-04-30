@@ -9,7 +9,7 @@ You must now add your [Users](/conversation/concepts/user) as [Members](/convers
 To add `USER1` to the conversation replace `CONVERSATION_ID` in the command below with your conversation Id generated previously (`CON-...`) and run the command:
 
 ```sh
-$ nexmo member:add CONVERSATION_ID action=join channel='{"type":"app"}' user_name=USER1
+nexmo member:add CONVERSATION_ID action=join channel='{"type":"app"}' user_name=USER1
 ```
 
 The output is ID of the Member:
@@ -21,6 +21,6 @@ Member added: MEM-aaaaaaa-bbbb-cccc-dddd-0123456789ab
 Now you need to add the second user, `USER2` to the Conversation. Similarly, replace the `CONVERSATION_ID` and execute the command:
 
 ```sh
-$ nexmo member:add CONVERSATION_ID action=join channel='{"type":"app"}' user_name=USER2
+nexmo member:add CONVERSATION_ID action=join channel='{"type":"app"}' user_name=USER2
 Member added: MEM-eeeeeee-...
 ```
