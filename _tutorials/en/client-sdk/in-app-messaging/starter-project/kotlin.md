@@ -22,8 +22,8 @@ Now it's time to fill previously generated `conversation ID` and `JWT` tokens.
 
 Open `Config.kt` file and add fill:
 
-1. `Jane`'s user Id and JWTs
-1. `Joe`'s user Id and JWTs
+1. `USER1`'s user Id and JWTs
+1. `USER2`'s user Id and JWTs
 1. `CONVERSATION_ID` you've created on the previous steps:
 
 ```kotlin
@@ -38,13 +38,13 @@ object Config {
 
     const val CONVERSATION_ID: String = "" // TODO: set conversation Id
 
-    val jane = User(
-        "Jane",
-        "" // TODO: "set Jane's JWT token"
+    val user1 = User(
+        "USER1",
+        "" // TODO: "set USER1's JWT token"
     )
-    val joe = User(
-        "Joe",
-        "" // TODO: set Joe's JWT token"
+    val user2 = User(
+        "USER1",
+        "" // TODO: set USER2's JWT token"
     )
 }
 
