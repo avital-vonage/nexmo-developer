@@ -7,12 +7,12 @@ description: In this step you learn how to generate valid JWTs for each User in 
 
 You need to generate a JWT for each user. The JWT is used to authenticate the user.
 
-In the following code remember to replace the `MY_APP_ID` variable with id of your application:
+In the following code remember to replace the `APPLICATION_ID` variable with id of your application:
 
 ``` shell
-nexmo jwt:generate sub=USER1 exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=MY_APP_ID
+nexmo jwt:generate sub=USER1 exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=APPLICATION_ID
 
-nexmo jwt:generate sub=USER2 exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=MY_APP_ID
+nexmo jwt:generate sub=USER2 exp=$(($(date +%s)+86400)) acl='{"paths":{"/*/users/**":{},"/*/conversations/**":{},"/*/sessions/**":{},"/*/devices/**":{},"/*/image/**":{},"/*/media/**":{},"/*/applications/**":{},"/*/push/**":{},"/*/knocking/**":{}}}' application_id=APPLICATION_ID
 ```
 
 The above commands set the expiry of the JWT to one day from now, which is the maximum.
