@@ -24,8 +24,8 @@ prerequisites:
 
 tasks:
   - client-sdk/in-app-messaging/create-application
-  - client-sdk/in-app-messaging/create-conversation
-  - client-sdk/in-app-messaging/create-users
+  - client-sdk/create-conversation
+  - client-sdk/create-users
   - client-sdk/in-app-messaging/add-users-to-conversation
   - client-sdk/in-app-messaging/generate-jwts
   - client-sdk/in-app-messaging/starter-project
