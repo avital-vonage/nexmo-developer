@@ -3,14 +3,16 @@ class Product
   def self.all
     [
       { 'path' => 'messaging/sms', 'icon' => 'message', 'icon_colour' => 'purple', 'name' => 'SMS' },
-      { 'path' => 'voice/voice-api', 'icon' => 'phone', 'icon_colour' => 'green', 'name' => 'Voice' },
+      { 'path' => 'voice/voice-api', 'icon' => 'phone', 'icon_colour' => 'orange', 'name' => 'Voice' },
       { 'path' => 'verify', 'icon' => 'lock', 'icon_colour' => 'purple-dark', 'name' => 'Verify' },
       { 'path' => 'messages', 'icon' => 'chat', 'icon_colour' => 'blue', 'name' => 'Messages' },
-      { 'path' => 'dispatch', 'icon' => 'flow', 'icon_colour' => 'blue', 'name' => 'Dispatch' },
-      { 'path' => 'number-insight', 'icon' => 'file-search', 'icon_colour' => 'orange', 'name' => 'Number Insight' },
-      { 'path' => 'conversation', 'icon' => 'message', 'icon_colour' => 'blue', 'name' => 'Conversation' },
+      { 'path' => 'dispatch', 'icon' => 'reload', 'icon_colour' => 'blue', 'name' => 'Dispatch' },
+      { 'path' => 'number-insight', 'icon' => 'search', 'icon_colour' => 'orange', 'name' => 'Number Insight' },
+      { 'path' => 'conversation', 'icon' => 'more-detailed-list', 'icon_colour' => 'blue', 'name' => 'Conversation' },
       { 'path' => 'client-sdk', 'icon' => 'queue', 'icon_colour' => 'blue', 'name' => 'Client SDK' },
-      { 'path' => 'account/subaccounts', 'icon' => 'user', 'icon_colour' => 'blue', 'name' => 'Subaccounts' },
+      { 'path' => 'account/subaccounts', 'icon' => 'add-user', 'icon_colour' => 'blue', 'name' => 'Subaccounts' },
+      { 'path' => 'audit', 'icon' => 'file-search', 'icon_colour' => 'blue', 'name' => 'Audit' },
+      { 'path' => 'reports', 'icon' => 'report', 'icon_colour' => 'blue', 'name' => 'Reports' },
     ]
   end
 

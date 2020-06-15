@@ -1,5 +1,7 @@
 en:
 
+  any_product: Any product
+
   menu:
     message-search: Message Search
     messaging: Messaging
@@ -83,6 +85,8 @@ en:
         get_an_api_key: Get an API key
         start_building: Start building for free
         use-cases: Use Cases
+      programming_languages_dropdown:
+        any_language: Any language
 
   code_snippets:
     copy_to_clipboard: Copy to Clipboard
