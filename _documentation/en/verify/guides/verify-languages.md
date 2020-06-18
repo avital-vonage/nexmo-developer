@@ -43,8 +43,10 @@ Value of `lg` | Language
 `ro-ro` | Romanian
 `ru-ru` | Russian
 `sv-se` | Swedish
+`th-tha` | Thai
 `tr-tr` | Turkish
 `vi-vn` | Vietnamese
+`yue-chn` | Yeu Chinese
 `zh-cn` | Chinese (Mainland)
 `zh-tw` | Chinese (Taiwan)
 
