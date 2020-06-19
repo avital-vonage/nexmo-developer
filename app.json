@@ -1,15 +1,4 @@
 {
-  "environments": {
-    "test": {
-      "addons":[
-         "heroku-postgresql"
-      ],
-      "scripts": {
-        "test-setup": "rails s -d",
-        "test": "rake test:all"
-      }
-    }
-  },
   "buildpacks": [
     { "url": "https://github.com/Nexmo/heroku-buildpack-git-submodule" },
     { "url": "heroku/ruby" }
@@ -22,5 +11,11 @@
     "OAS_PATH": "_open_api/api_specs/definitions",
     "DOCS_BASE_PATH": "."
   },
-  "stack": "heroku-18"
+  "stack": "heroku-18",
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
