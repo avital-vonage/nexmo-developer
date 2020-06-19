@@ -57,6 +57,7 @@ jobs:
     - name: Bundle Install
       env:
         POSTGRES_USERNAME: postgres
+        BUNDLE_RUBYGEMS__PKG__GITHUB__COM: "NexmoDev:${{ secrets.GH_ADMIN_TOKEN }}"
       run: |
         gem update --system 3.0.3 -N
         gem install --no-document bundler
