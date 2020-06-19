@@ -1,7 +1,4 @@
 {
-  "scripts": {
-    "postdeploy": "rake search_terms:algolia:refresh"
-  },
   "environments": {
     "test": {
       "addons":[
@@ -15,7 +12,6 @@
   },
   "buildpacks": [
     { "url": "https://github.com/Nexmo/heroku-buildpack-git-submodule" },
-    { "url": "heroku/nodejs" },
     { "url": "heroku/ruby" }
   ],
   "env": {
