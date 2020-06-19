@@ -1,7 +1,7 @@
 name: Vonage API Developer
 subtitle: Nexmo is now Vonage
 docs_repo: 'nexmo/nexmo-developer'
-oas_repo: 'nexmo/api-specification'
+oas_url: https://www.github.com/nexmo/api-specification/blob/master/definitions
 assets:
   header_logo:
     path: '/images/logos/vbc-logo.svg'
