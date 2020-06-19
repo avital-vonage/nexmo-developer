@@ -66,6 +66,12 @@ products:
     path: dispatch
     dropdown: true
   -
+    name: 'Getting Started'
+    icon: 'queue'
+    icon_colour: 'purple-dark'
+    path: 'getting-started'
+    dropdown: false
+  -
     name: 'Messages API'
     icon: 'message'
     icon_colour: 'purple-dark' 
