@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/nexmo/station.git
-  revision: 34ad174371a91c3139d476b11bf141f034007d64
+  revision: 4afed5a709a0fa91c4ef41b300897665e58ad085
   branch: add-ndp-specs
   specs:
     nexmo-developer (0.0.69)
