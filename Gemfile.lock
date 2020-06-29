@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/nexmo/station.git
-  revision: eb8b2d9233e5d2bdc5f27af753b2e7783c5eb8e0
+  revision: 148416a3fe9c81eb655e12e0cfcb479281afba1d
   branch: add-rake-tasks
   specs:
     nexmo-developer (0.0.69)
