@@ -77,4 +77,4 @@ jobs:
         OAS_PATH: "_open_api/api_specs/definitions"
         FORCE_COLOR: true
       run: |
-        RAILS_ENV=test bundle exec nexmo-developer --docs=/Users/frodriguez/Code/nexmo-developer --rake-ci
+        RAILS_ENV=test bundle exec nexmo-developer --docs=. --rake-ci
