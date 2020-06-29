@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/nexmo/nexmo-markdown-renderer.git
-  revision: cc10f4a3ac875cef36886dd195fd04414d5587c7
+  revision: e3b21539cd76d799bdc95c40c057ca8c7f419adb
   branch: consider-rails-root-for-views
   specs:
     nexmo_markdown_renderer (0.4.0)
@@ -462,7 +462,7 @@ GEM
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     woothee (1.11.1)
-    zeitwerk (2.3.0)
+    zeitwerk (2.3.1)
 
 PLATFORMS
   ruby
