@@ -14,8 +14,8 @@ GIT
 
 GIT
   remote: https://github.com/nexmo/station.git
-  revision: 2edb6236f6e78b059fefa97edc3680b8076c9c21
-  branch: add-ndp-specs
+  revision: eb8b2d9233e5d2bdc5f27af753b2e7783c5eb8e0
+  branch: add-rake-tasks
   specs:
     nexmo-developer (0.0.69)
       activeadmin (~> 2.6)
