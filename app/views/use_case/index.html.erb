@@ -6,22 +6,24 @@
   <%= render partial: 'layouts/partials/programming_languages_dropdown', controller_name: :use_case, action_name: :index %>
 
   <div class="Vlt-dropdown">
-    <button class="Vlt-dropdown__btn Vlt-btn--app"><%= t('.any_product') %></button>
+    <div class="Vlt-dropdown__trigger Vlt-dropdown__trigger--btn">
+      <button class="Vlt-dropdown__btn Vlt-btn--app">
+        <span class="Vlt-dropdown__selection"><%= params[:product] && Product.normalize_title(params[:product]) || t('.any_product') %></span>
+      </button>
+    </div>
     <div class="Vlt-dropdown__panel">
       <div class="Vlt-dropdown__panel__content">
-        <ul>
-          <% Product.all.each do |product| %>
-            <li>
-              <a
-                class="Vlt-dropdown__link"
-                href="<%= url_for(controller: :use_case, action: :index, product: product['path'], code_language: @language)%>"
-                >
-                <svg style="height: 20px; width: 20px;" class="Vlt-gray-darker Vlt-dropdown__link__icon"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-<%= product['icon'] %>"></use></svg>
-                <div class="Vlt-dropdown__divider"><%= product['name'] %><hr class="hr--short"></hr></div>
-              </a>
-            </li>
-          <% end %>
-        </ul>
+        <a class="Vlt-dropdown__link" href="<%= url_for(controller: :use_case, action: :index, product: nil, code_language: @language)%>">
+          <span class="Vlt-dropdown__label"><%= t('.any_product') %></span>
+        </a>
+        <hr class="hr--short"></hr>
+        <% Product.all.each do |product| %>
+          <a class="Vlt-dropdown__link" href="<%= url_for(controller: :use_case, action: :index, product: product['path'], code_language: @language)%>">
+            <svg style="height: 20px; width: 20px;" class="Vlt-gray-darker Vlt-dropdown__link__icon"><use xlink:href="/symbol/volta-icons.svg#Vlt-icon-<%= product['icon'] %>"></use></svg>
+            <span class="Vlt-dropdown__label"><%= product['name'] %></span>
+          </a>
+          <hr class="hr--short"></hr>
+        <% end %>
       </div>
     </div>
   </div>
