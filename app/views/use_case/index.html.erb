@@ -8,13 +8,13 @@
   <div class="Vlt-dropdown">
     <div class="Vlt-dropdown__trigger Vlt-dropdown__trigger--btn">
       <button class="Vlt-dropdown__btn Vlt-btn--app">
-        <span class="Vlt-dropdown__selection"><%= params[:product] && Product.normalize_title(params[:product]) || t('.any_product') %></span>
+        <span class="Vlt-dropdown__selection"><%= params[:product] && Product.normalize_title(params[:product]) || t('any_product') %></span>
       </button>
     </div>
     <div class="Vlt-dropdown__panel">
       <div class="Vlt-dropdown__panel__content">
         <a class="Vlt-dropdown__link" href="<%= url_for(controller: :use_case, action: :index, product: nil, code_language: @language)%>">
-          <span class="Vlt-dropdown__label"><%= t('.any_product') %></span>
+          <span class="Vlt-dropdown__label"><%= t('any_product') %></span>
         </a>
         <hr class="hr--short"></hr>
         <% Product.all.each do |product| %>

@@ -1,20 +1,19 @@
 <div class="Vlt-dropdown">
-  <button class="Vlt-dropdown__btn Vlt-btn--app"><%= t('.any_language') %></button>
+  <div class="Vlt-dropdown__trigger Vlt-dropdown__trigger--btn">
+    <button class="Vlt-dropdown__btn Vlt-btn--app">
+      <span class="Vlt-dropdown__selection"><%= params[:code_language] && Nexmo::Markdown::CodeLanguage.find(params[:code_language]).label || t('any_language') %></span>
+    </button>
+  </div>
   <div class="Vlt-dropdown__panel">
     <div class="Vlt-dropdown__panel__content">
-      <ul>
-        <% Nexmo::Markdown::CodeLanguage.languages.reject { |l| l.key == 'dotnet' }.each do |lang| %>
-          <li>
-            <a
-              class="Vlt-dropdown__link"
-              href="<%= url_for(controller: controller_name, action: action_name, product: params[:product], code_language: lang.key)%>"
-              >
-              <svg class="Vlt-dropdown__link__icon" style="height: 20px; width: 20px;" ><use xlink:href="/assets/images/brands/<%= lang.icon %>.svg#<%= lang.icon %>"></use></svg>
-              <div class="Vlt-dropdown__divider"><%= lang.label %><hr class="hr--short"></hr></div>
-            </a>
-          </li>
-        <% end %>
-      </ul>
+      <a class="Vlt-dropdown__link" href="<%= url_for(controller: controller_name, action: action_name, product: params[:product], code_language: nil) %>"><%= t('any_language') %></a>
+      <hr class="hr--short"></hr>
+      <% LanguagesDropdownPresenter.new.options.each do |option| %>
+        <a class="Vlt-dropdown__link" href="<%= url_for(controller: controller_name, action: action_name, product: params[:product], code_language: option.code_language) %>">
+          <%= render 'code_languages/icon', code_language: option.code_language, css_classes: 'Vlt-dropdown__link__icon' %>
+        </a>
+        <hr class="hr--short"></hr>
+      <% end %>
     </div>
   </div>
 </div>
