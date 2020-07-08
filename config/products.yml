@@ -144,38 +144,8 @@ products:
     path: voice/voice-api
     dropdown: true
   -
-    name: 'Smart Numbers'
+    name: 'Vonage Business Cloud'
     icon: 'telephone'
     icon_colour: 'purple-dark' 
-    path: vonage-business-cloud/smart-numbers
-    dropdown: true
-  -
-    name: 'Vonage Integration Suite'
-    icon: 'telephone'
-    icon_colour: 'purple-dark' 
-    path: vonage-business-cloud/integration-suite
-    dropdown: true
-  -
-    name: 'VBC Account API'
-    icon: 'telephone'
-    icon_colour: 'purple-dark' 
-    path: vonage-business-cloud/vbc-apis/account-api
-    dropdown: true
-  -
-    name: 'VBC Extension API'
-    icon: 'telephone'
-    icon_colour: 'purple-dark' 
-    path: vonage-business-cloud/vbc-apis/extension-api
-    dropdown: true
-  -
-    name: 'VBC Reports API'
-    icon: 'telephone'
-    icon_colour: 'purple-dark' 
-    path: vonage-business-cloud/vbc-apis/reports-api
-    dropdown: true
-  -
-    name: 'VBC User API'
-    icon: 'telephone'
-    icon_colour: 'purple-dark' 
-    path: vonage-business-cloud/vbc-apis/user-api
+    path: vonage-business-cloud
     dropdown: true
